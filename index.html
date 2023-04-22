@@ -4,32 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namaste Everyone</title>
+    <title>Namaste Everyone from React js</title>
 </head>
-<div id="root">
-    <h1 id="title">Heading 1</h1>
-</div>
 <body>
-    <!-- we will directly use react with the help of  cdn network in the here and the web-page will transform into reactjs -->
+    <div id="root">
+        <div id="title">
+            <h1>Hi Heading 1 From html </h1>
+            <h2>hi Heading 2 from Html</h2>
+        </div>   
+    </div>
+
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-   <script>
-    // how to create h1 using javascipt
-    // const heading=document.createElement("heading");
-    // heading.innerHTML="Hello Everyone from javascript";
-    // const root=document.getElementById("root");
-    // root.appendChild(heading);
+    <script>
+        // Created the div using react js
+        
+        const heading1=React.createElement(
+            "h1",
+            {
+                id:"title",  
+            },"Namaste Heading 1 from REact js");
+            
+        const heading2=React.createElement(
+            "h2",
+            {
+                id:"title",
+            },"Namaste Everyone from heading 2");
+        
+        const container=React.createElement(
+            "div",
+            {
+                id:"container",
+        },[heading1,heading2])
+        
+        const root=ReactDOM.createRoot(document.getElementById("root"))
 
-    // How to create h1 using React js
-    const heading=React.createElement("h1",{},"Namaste Everyone from react");
-
-    const root=ReactDOM.createRoot(document.getElementById("root"));
-
-    root.render(heading);
-
-    // Now here we have been that react has place all the things whatever is there !
-    
-   </script>
+        root.render(container);
+        
+    </script>
 </body>
 </html>
